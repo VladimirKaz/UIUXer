@@ -1,5 +1,5 @@
-@use '../abstracts/mixins' as mixin;
-@use '../abstracts/variables' as var;
+@use 'sass:color';
+@use '../abstracts/' as *;
 
 .btn, 
 a.btn {
@@ -11,17 +11,17 @@ a.btn {
   align-items: center;
   justify-content: center;
 
-  border: 1px solid var.$color-white;
+  border: 1px solid color-orange;
   border-radius: 10px;
-  background: var.$color-white;
+  background: $color-white;
 
-  font-family: var.$second-family;
+  font-family: $second-family;
   font-weight: 400;
   font-size: 1.8rem;
   line-height: 1.5;
   letter-spacing: 0.02em;
   text-align: center;
-  color: var.$color-white;
+  color: $color-white;
 
   transition: all 0.2s ease-in;
 
@@ -31,49 +31,52 @@ a.btn {
   }
 
   &--orange {
-    border: 1px solid var.$color-orange;
-    background: var.$color-orange;
+    border: 1px solid $color-orange;
+    background: $color-orange;
 
     &:hover {
-      background: lighten(var.$color-orange, 7);
+      // background: lighten(var.$color-orange, 7);
+      background: color.scale($color-orange, $lightness: 7%);
     }
   }
 
   &--blue {
-    border: 1px solid var.$color-blue;
-    background: var.$color-blue;
+    border: 1px solid $color-blue;
+    background: $color-blue;
 
     &:hover {
-      background: lighten(var.$color-blue, 7);
+      // background: lighten($color-blue, 7);
+      background: color.scale($color-blue, $lightness: 7%);
     }
   }
   
   &--blue-dark {
     max-width: 18.7rem;
 
-    background: var.$color-blue-dark;
-    border: 1px solid var.$color-blue-dark;
+    background: $color-blue-dark;
+    border: 1px solid $color-blue-dark;
     padding: 1rem 2.1rem;
 
     &:hover {
-      background: lighten(var.$color-blue-dark, 7);
+      // background: lighten($color-blue-dark, 7);
+      background: color.scale($color-blue-dark, $lightness: 7%);
     }
   }
 
   // Break points
   // 1024
-  @include mixin.below-laptop {
+  @include below-laptop {
 
   }
 
   // 768
-  @include mixin.below-tablet {
+  @include below-tablet {
     padding: 1rem 2rem;
     font-size: 1.7rem;
   }
 
   // 480
-  @include mixin.below-mobile {
+  @include below-mobile {
     padding: .5rem 1rem;
     font-size: 1.5rem;
 

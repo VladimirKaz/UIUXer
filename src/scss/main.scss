@@ -4,9 +4,7 @@
 @use './base/typography';
 
 // abstracts
-@use './abstracts/variables';
-@use './abstracts/functions';
-@use './abstracts/mixins';
+@use './abstracts/' as *;
 
 // layout
 @use './layout/header';
@@ -28,7 +26,6 @@
 @use './components/buttons';
 @use './components/scroll-btn';
 @use './components/modal';
-
 
 // 
 // 

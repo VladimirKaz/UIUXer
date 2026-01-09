@@ -90,7 +90,8 @@ function html() {
 
   return src(paths.htmlMain)
     .pipe(fileInclude({ prefix: '@@', basepath: '@file' }))
-    .pipe(replace(/src="(\.\/)?(img|js|css)\//g, 'src="./$2/'))
+    // .pipe(replace(/src="(\.\/)?(img|js|css)\//g, 'src="./$2/'))
+    .pipe(replace(/ (src|href)="\/(img|js|css|fonts|icons)\//g, ' $1="$2/'))
     .pipe(dest(paths.distHTML))
     .on('end', () => console.log('✅ HTML собран'));
 }
