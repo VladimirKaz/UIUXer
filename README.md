@@ -2,7 +2,7 @@
 
 ## 🔗 Ссылки
 
-- [🌐 Живая демонстрация](https://username.github.io/https://github.com/VladimirKaz/UIUXer)
+- [🌐 Живая демонстрация]([https://username.github.io/https://github.com/VladimirKaz/UIUXer](https://vladimirkaz.github.io/UIUXer/))
 
 ## Использовал технологии:
 
