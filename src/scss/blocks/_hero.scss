@@ -15,9 +15,10 @@
     justify-content: center;
     align-items: center;
 
+    background-image: url('/img/blocks/hero/hero-bg.png');
     background-image: image-set(
-      url('img/blocks/hero/hero-bg.png') 1x,
-      url('img/blocks/hero/hero-bg@2x.png') 2x);
+      url('/img/blocks/hero/hero-bg.png') 1x,
+      url('/img/blocks/hero/hero-bg@2x.png') 2x);
     background-size: cover;
     border-radius: 20px;
   }
