@@ -17,8 +17,8 @@ const toggleMobileMenu = (open) => {
   mobileNav.classList[isOpen ? 'add' : 'remove']('mobile-nav--open');
 
   mobileNavIcon.src = isOpen 
-    ? '/img/layout/header/cross.svg' 
-    : '/img/layout/header/icons8-menu-30.svg';
+    ? 'img/layout/header/cross.svg' 
+    : 'img/layout/header/icons8-menu-30.svg';
 
   mobileNavIcon.alt = isOpen 
     ? 'Close menu' 
