@@ -1,6 +1,24 @@
-@use './variables' as var;
+@use 'sass:meta';
+@use 'sass:math';
 
-// Bp
-@function max-width($breakpoint) {
-  @return calc(#{$breakpoint} - 1px);
+// Calculate max-width for media queries (breakpoint - 0.02px)
+@function breakpoint-max($breakpoint) {
+  @return $breakpoint - 0.02px;
+}
+
+// convert px to em units
+@function em($px, $base: 16px) {
+  @return ($px / $base) * 1em;
+}
+
+// convert px to rem units
+@function rem($px, $base: 16px) {
+  @return ($px / $base) * 1rem;
+}
+
+// Strips units from a CSS value for mathematical operations
+// strip-unit(100px)    // 100
+
+@function strip-unit($value) {
+  @return $value / ($value * 0 + 1);
 }

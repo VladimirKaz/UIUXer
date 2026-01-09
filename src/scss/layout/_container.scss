@@ -1,4 +1,4 @@
-@use '../abstracts/mixins' as mixin;
+@use '../abstracts/' as *;
 
 .container {
   width: 100%;
@@ -7,20 +7,19 @@
   padding: 0 1.5rem;
 
   // 1024
-  @include mixin.below-laptop {
+  @include below-laptop {
     width: 100%;
     padding: 0 1.5rem;
   }
 
   // 768
-  @include mixin.below-tablet {
+  @include below-tablet {
     width: 100%;
     padding: 0 1rem;
   }
 
   // 480
-  @include mixin.below-mobile {
+  @include below-mobile {
     padding: 0 0.5rem;
   }
-
 }

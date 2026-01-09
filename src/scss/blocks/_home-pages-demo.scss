@@ -1,4 +1,4 @@
-@use '../abstracts/mixins' as mixin;
+@use '../abstracts/' as *;
 
 .home-pages-demo {
   margin-bottom: 4rem;
@@ -16,7 +16,7 @@
   }
 
   // 1024
-  @include mixin.below-laptop {
+  @include below-laptop {
 
     &__content {
       padding-bottom: 4rem;
@@ -28,7 +28,7 @@
   }
 
   // 768
-  @include mixin.below-tablet {
+  @include below-tablet {
     &__content {
       padding-bottom: 2rem;
     }
@@ -39,7 +39,7 @@
   }
 
   // 480
-  @include mixin.below-mobile {
+  @include below-mobile {
     margin-bottom: 2rem;
 
     &__content {

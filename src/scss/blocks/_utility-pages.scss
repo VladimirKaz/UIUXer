@@ -1,4 +1,4 @@
-@use '../abstracts/mixins' as mixin;
+@use '../abstracts/' as *;
 
 .utility-pages {
   padding: 12rem 4rem;
@@ -17,7 +17,7 @@
   }
 
   // 1024
-  @include mixin.below-laptop {
+  @include below-laptop {
     padding: 6rem 2rem;
   
     &__content {
@@ -34,7 +34,7 @@
   }
 
   // 768
-  @include mixin.below-tablet {
+  @include below-tablet {
     padding: 3rem 1rem;
     
     &__content {
@@ -51,7 +51,7 @@
   }
 
   // 480
-  @include mixin.below-mobile {
+  @include below-mobile {
     padding: 1rem 1rem;
     
     &__content {

@@ -1,7 +1,6 @@
-@use '../abstracts/mixins' as mixin;
+@use '../abstracts/' as *;
 
 .case-studies {
-
   background: #edf0f9;
 
   &__content {
@@ -13,7 +12,7 @@
   }
 
   // 1024
-  @include mixin.below-laptop {
+  @include below-laptop {
     &__content {
       padding: 6rem 2rem;
     }
@@ -24,7 +23,7 @@
   }
 
   // 768
-  @include mixin.below-tablet {
+  @include below-tablet {
     &__content {
       padding: 4rem 2rem;
     }
@@ -35,7 +34,7 @@
   }
 
   // 480
-  @include mixin.below-mobile {
+  @include below-mobile {
     &__content {
       padding: 1rem 1rem;
     }

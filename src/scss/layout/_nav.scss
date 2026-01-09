@@ -1,5 +1,4 @@
-@use '../abstracts/mixins' as mixin;
-@use '../abstracts/variables' as var;
+@use '../abstracts/' as *;
 
 .nav {
 
@@ -23,17 +22,17 @@
     }   
 
     // 1024
-    @include mixin.below-laptop {
+    @include below-laptop {
 
     }
 
     // 768
-    @include mixin.below-tablet {
+    @include below-tablet {
       display: none;
     }
 
     // 480
-    @include mixin.below-mobile {
+    @include below-mobile {
 
     }
   }

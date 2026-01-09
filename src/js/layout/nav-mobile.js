@@ -4,10 +4,11 @@ const mobileNavBody = document.querySelector('.mobile-nav__list');
 const mobileNavIcon = document.querySelector('#mobileNavIcon');
 
 mobileNavIcon.onerror = function() {
-    console.error('Can`t load icon:', this.src);
-    this.alt = '[Mobile menu icon]';
+  console.error('Can`t load icon:', this.src);
+  this.alt = '[Mobile menu icon]';
 };
 
+// main logic open/close modal
 const toggleMobileMenu = (open) => {
 
   const isOpen = open !== undefined 
@@ -41,6 +42,7 @@ mobileNavBtn.addEventListener('click', (e) => {
   toggleMobileMenu();
 })
 
+// Close menu on click out modal body
 mobileNav.addEventListener('click', (e) => {
   const isMenuOpen = mobileNav.classList.contains('mobile-nav--open');
   const isClickInsideBody = mobileNavBody.contains(e.target);

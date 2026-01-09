@@ -1,1 +1,1 @@
-console.log('hello gulp');
+console.log('main js loaded');
