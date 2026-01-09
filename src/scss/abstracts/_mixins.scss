@@ -1,0 +1,43 @@
+@use './functions' as functions;
+@use './variables' as var;
+
+
+@mixin below-desktop {
+  @media (max-width: 
+    functions.max-width(
+      var.$breakpoint-desktop)) {
+    @content;
+  }
+}
+
+@mixin below-laptop {
+  @media (max-width: 
+    functions.max-width(
+      var.$breakpoint-laptop)) {
+    @content;
+  }
+}
+
+@mixin below-tablet {
+  @media (max-width: 
+    functions.max-width(
+      var.$breakpoint-tablet)) {
+    @content;
+  }
+}
+
+@mixin below-mobile {
+  @media (max-width: 
+    functions.max-width(
+      var.$breakpoint-mobile)) {
+    @content;
+  }
+}
+
+@mixin below-mobile-small {
+  @media (max-width: 
+    functions.max-width(
+      var.$breakpoint-mobile-small)) {
+    @content;
+  }
+}

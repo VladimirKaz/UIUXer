@@ -1,0 +1,71 @@
+@use '../abstracts/mixins' as mixin;
+
+.utility-pages {
+  padding: 12rem 4rem;
+  background: #2a2c32;
+
+  &__content {
+    padding-bottom: 7rem;
+
+    ul + ul {
+      margin-top: 8.6rem;
+    }
+  }
+  
+  &__title {
+    margin-bottom: 6rem;
+  }
+
+  // 1024
+  @include mixin.below-laptop {
+    padding: 6rem 2rem;
+  
+    &__content {
+      padding-bottom: 3.5rem;
+  
+      ul+ul {
+        margin-top: 4.3rem;
+      }
+    }
+  
+    &__title {
+      margin-bottom: 3rem;
+    }
+  }
+
+  // 768
+  @include mixin.below-tablet {
+    padding: 3rem 1rem;
+    
+    &__content {
+      padding-bottom: 3.5rem;
+  
+      ul+ul {
+        margin-top: 4.3rem;
+      }
+    }
+  
+    &__title {
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  // 480
+  @include mixin.below-mobile {
+    padding: 1rem 1rem;
+    
+    &__content {
+      padding-bottom: 1.5rem;
+  
+      ul+ul {
+        margin-top: 2.1rem;
+      }
+    }
+  
+    &__title {
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+

@@ -1,0 +1,94 @@
+@use '../abstracts/mixins' as mixin;
+@use '../abstracts/variables' as var;
+
+.btn, 
+a.btn {
+  padding: 2.1rem 7.1rem;
+  width: 100%;
+  max-width: 26.6rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid var.$color-white;
+  border-radius: 10px;
+  background: var.$color-white;
+
+  font-family: var.$second-family;
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  text-align: center;
+  color: var.$color-white;
+
+  transition: all 0.2s ease-in;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  &--orange {
+    border: 1px solid var.$color-orange;
+    background: var.$color-orange;
+
+    &:hover {
+      background: lighten(var.$color-orange, 7);
+    }
+  }
+
+  &--blue {
+    border: 1px solid var.$color-blue;
+    background: var.$color-blue;
+
+    &:hover {
+      background: lighten(var.$color-blue, 7);
+    }
+  }
+  
+  &--blue-dark {
+    max-width: 18.7rem;
+
+    background: var.$color-blue-dark;
+    border: 1px solid var.$color-blue-dark;
+    padding: 1rem 2.1rem;
+
+    &:hover {
+      background: lighten(var.$color-blue-dark, 7);
+    }
+  }
+
+  // Break points
+  // 1024
+  @include mixin.below-laptop {
+
+  }
+
+  // 768
+  @include mixin.below-tablet {
+    padding: 1rem 2rem;
+    font-size: 1.7rem;
+  }
+
+  // 480
+  @include mixin.below-mobile {
+    padding: .5rem 1rem;
+    font-size: 1.5rem;
+
+    & img {
+      width: 2rem;
+      height: 2rem;
+    }
+
+    &--blue-dark {
+      max-width: 15rem;
+    }
+  }
+
+  // 420
+  @media (max-width: 420px) {
+    font-size: 1rem;
+  }
+}

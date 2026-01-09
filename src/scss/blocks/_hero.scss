@@ -1,0 +1,241 @@
+@use '../abstracts/mixins' as mixin;
+
+#hero {
+  scroll-margin-top: 100px;
+}
+
+.hero {
+  margin-bottom: 120px;
+
+  &__content {
+    padding: 16.3rem 0 13.3rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-image: image-set(url('/img/blocks/hero/hero-bg.png') 1x,
+        url('/img/blocks/hero/hero-bg@2x.png') 2x);
+    background-size: cover;
+    border-radius: 20px;
+  }
+
+  &__title {
+    width: 100%;
+    max-width: 1200px;
+    margin-bottom: 0.3rem;
+
+    position: relative;
+    overflow: visible;
+
+    text-align: center;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 10rem;
+    line-height: 1.3;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #242f65;
+
+    // Break points
+    // 1024
+    @include mixin.below-laptop {
+      width: 90%;
+      font-size: 7rem;
+    }
+
+    // 768
+    @include mixin.below-tablet {
+      width: 100%;
+      font-size: 6rem;
+    }
+
+    // 480
+    @include mixin.below-mobile {
+      width: 95%;
+      font-size: 3.5rem;
+    }
+
+    // 360
+    @include mixin.below-mobile-small {
+      width: 90%;
+      font-size: 2.5rem;
+    }
+  }
+
+  &__description {
+    max-width: 50rem;
+
+    margin-bottom: 0.3rem;
+
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 2.5rem;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: #242f65;
+  }
+
+  &__btns {
+    margin-bottom: 6rem;
+    padding: 10px 0;
+    width: 60%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0 1rem;
+  }
+
+  &__description {
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 2.5rem;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: #242f65;
+  }
+
+  &__scroll-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  // 1024
+  @include mixin.below-laptop {
+    margin-bottom: 6rem;
+    width: 100%;
+
+    &__content {
+      padding: 8rem 0 8rem;
+    }
+
+    &__btns {
+      width: 80%;
+    }
+  }
+
+  // 767
+  @include mixin.below-tablet {
+    margin-bottom: 4rem;
+
+    &__content {
+      padding: 4rem 0 4rem;
+    }
+
+    &__description {
+      font-size: 1.5rem;
+    }
+
+    &__btns {
+      margin-bottom: 1.5rem;
+      padding: 10px 0;
+      flex-direction: column;
+      gap: 1.1rem;
+    }
+  }
+ 
+  // 480
+  @include mixin.below-mobile {
+    &__content {
+      padding: 2rem 0 2rem;
+    }
+
+    &__description {
+      font-size: 1.5rem;
+    }
+
+    &__btns {
+      width: 35%;
+    }
+  }
+
+  // Absolute breakpoints
+  .hero__title {
+    /* Базовые стили (для очень больших экранов) */
+    width: 95%;
+    font-size: 9.5rem;
+
+    @media (max-width: 1219px) {
+      font-size: 9rem;
+    }
+
+    @media (max-width: 1159px) {
+      width: 100%;
+    }
+
+    @media (max-width: 1100px) {
+      font-size: 8.5rem;
+    }
+
+    @media (max-width: 1059px) {
+      width: 95%;
+      font-size: 7.5rem;
+    }
+
+    @media (max-width: 1000px) {
+      font-size: 7rem;
+    }
+
+    @media (max-width: 860px) {
+      width: 100%;
+      font-size: 6rem;
+    }
+
+    @media (max-width: 730px) {
+      width: 95%;
+      font-size: 5.5rem;
+    }
+
+    @media (max-width: 700px) {
+      font-size: 5rem;
+    }
+
+    @media (max-width: 640px) {
+      width: 90%;
+      font-size: 4.5rem;
+    }
+
+    @media (max-width: 610px) {
+      width: 95%;
+    }
+
+    @media (max-width: 580px) {
+      font-size: 4rem;
+    }
+
+    @media (max-width: 545px) {
+      width: 85%;
+      font-size: 3.5rem;
+    }
+
+    @media (max-width: 510px) {
+      width: 90%;
+    }
+
+    @media (max-width: 470px) {
+      width: 95%;
+    }
+
+    @media (max-width: 450px) {
+      width: 100%;
+    }
+
+    @media (max-width: 430px) {
+      font-size: 3rem;
+    }
+
+    @media (max-width: 390px) {
+      width: 85%;
+      font-size: 2.5rem;
+    }
+
+    @media (max-width: 375px) {
+      width: 90%;
+    }
+  }
+}

@@ -1,0 +1,51 @@
+@use '../abstracts/mixins' as mixin;
+
+.header {
+  padding: 3.5rem 0;
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    flex: 1;
+  }
+
+  &__nav {
+    flex: 1;
+  }
+
+  &__nav-btn-mobile {
+    display: none;
+
+    @media (max-width: 767px) {
+      display: block;
+    }
+  }
+
+  &__logo-link:focus, 
+  &__logo-link:focus-visible {
+    outline: 2px solid #007bff;
+    outline-offset: 4px;
+    border-radius: 4px;
+  }
+
+  // 1024
+  @include mixin.below-laptop {
+    
+  }
+
+  // 768
+  @include mixin.below-tablet {
+    padding: 2rem 0;
+  }
+
+  // 480
+  @include mixin.below-mobile {
+    padding: 1rem 0;
+  }
+}
+
+

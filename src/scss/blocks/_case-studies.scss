@@ -1,0 +1,47 @@
+@use '../abstracts/mixins' as mixin;
+
+.case-studies {
+
+  background: #edf0f9;
+
+  &__content {
+    padding: 12rem 4rem;
+  }
+  
+  &__title {
+    margin-bottom: 6rem;
+  }
+
+  // 1024
+  @include mixin.below-laptop {
+    &__content {
+      padding: 6rem 2rem;
+    }
+  
+    &__title {
+      margin-bottom: 4rem;
+    }
+  }
+
+  // 768
+  @include mixin.below-tablet {
+    &__content {
+      padding: 4rem 2rem;
+    }
+  
+    &__title {
+      margin-bottom: 3rem;
+    }
+  }
+
+  // 480
+  @include mixin.below-mobile {
+    &__content {
+      padding: 1rem 1rem;
+    }
+  
+    &__title {
+      margin-bottom: 1rem;
+    }
+  }
+}

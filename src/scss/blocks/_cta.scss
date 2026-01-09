@@ -1,0 +1,106 @@
+@use '../abstracts/mixins' as mixin;
+
+#cta {
+  scroll-margin-top: 100px;
+}
+
+.cta {
+  padding: 10rem 0;
+
+  &__grid {
+
+    display: flex;
+    gap: 3rem;
+
+    background-image: image-set(
+      url('/img/blocks/cta/cta-grid-bg.png') 1x,
+      url('/img/blocks/cta/cta-grid-bg@2x.png') 2x
+    );
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+  }
+  
+  &__content {
+    flex: 1;
+    padding: 11.1rem 0 0 6rem;
+    max-width: 52.7rem;
+
+    & * {
+      text-align: unset;
+    }
+  }
+
+  &__title {
+    margin-bottom: 1.2rem;
+  }
+
+  &__description {
+    margin-bottom: 1.8rem;
+  }
+
+  &__img {
+    flex: 1;
+    padding-top: 4rem;
+  }
+
+  &__btn {
+    max-width: 27.4rem;
+  }
+
+  // 1024
+  @include mixin.below-laptop {
+    padding: 5rem 0;
+    
+    &__grid {
+      gap: 1.5rem;
+    }
+  
+    &__content {
+      flex: 1;
+      padding: 6rem 0 0 6rem;
+    }
+  
+    &__btn {
+      max-width: 27.4rem;
+    }
+  }
+
+  // 768
+  @include mixin.below-tablet {
+    padding: 2.5rem 0;
+    
+    &__grid {
+      gap: 1.5rem;
+    }
+  
+    &__content {
+      flex: 1;
+      padding: 1rem 0 0 1rem;
+    }
+  
+    &__btn {
+      width: 100%;
+    }
+  }
+
+  // 480
+  @include mixin.below-mobile {
+    padding: 1.5rem 0;
+
+    &__grid {
+      gap: 0.5rem;
+    }
+  
+    &__content {
+      text-align: center;
+      padding: 0;
+    }
+  
+    &__btn {
+
+    }
+  }
+}
+

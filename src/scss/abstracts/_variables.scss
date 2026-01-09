@@ -1,0 +1,20 @@
+:root {
+  --font-family: "Fraunces", sans-serif;
+  --second-family: "Mulish", sans-serif;
+}
+
+$font-family: "Fraunces",sans-serif;
+$second-family: "Mulish",sans-serif;
+
+$breakpoint-desktop: 1200px;
+$breakpoint-laptop: 1024px;
+$breakpoint-tablet: 768px;
+$breakpoint-mobile: 480px;
+$breakpoint-mobile-small: 361px;
+
+// colors btn
+$color-white: hsl(0, 0%, 100%);
+$color-orange: hsl(14, 100%, 65%);
+$color-blue: hsl(227, 92%, 71%);
+$color-blue-dark: hsl(229, 48%, 27%);
+$color-nav-link: hsl(0, 0%, 18%)

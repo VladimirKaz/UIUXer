@@ -1,0 +1,40 @@
+@use '../abstracts/mixins' as mixin;
+@use '../abstracts/variables' as var;
+
+.nav {
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    transition: all 0.2s ease-in;
+
+    &:hover {
+      transform: translateY(-2px);
+    }
+
+    & a:focus,
+    & a:focus-visible {
+      outline: 2px solid #007bff;
+      outline-offset: 2px;
+      border-radius: 4px;
+    }   
+
+    // 1024
+    @include mixin.below-laptop {
+
+    }
+
+    // 768
+    @include mixin.below-tablet {
+      display: none;
+    }
+
+    // 480
+    @include mixin.below-mobile {
+
+    }
+  }
+}

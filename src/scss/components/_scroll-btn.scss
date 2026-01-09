@@ -1,0 +1,105 @@
+@use '../abstracts/variables' as var;
+@use '../abstracts/mixins' as mixin;
+
+.scroll-btn, 
+a.scroll-btn {
+  display: block;
+  // Animations
+  animation: pulse 1.5s ease-in-out infinite;
+
+  transition: transform 0.3s ease, filter 0.3s ease;
+
+  &:hover {
+    animation: none;
+    animation: shake 0.5s ease-in-out infinite;
+  }
+
+  &:active {
+    animation: none;
+    transform: scale(0.98) translateY(2px);
+  }
+
+  &:focus {
+    animation: none;
+    animation: wiggle 2s ease-in-out infinite;
+  }
+
+  // Для пользователей, предпочитающих минимум анимации
+  @media (prefers-reduced-motion: reduce) {
+    &__scroll-to-work {
+      animation: none;
+      transition: none;
+    }
+  }
+
+  // Keyframes versions
+  @keyframes wiggle {
+    0% {
+      transform: rotate(-3deg);
+    }
+
+    50% {
+      transform: rotate(3deg);
+    }
+
+    100% {
+      transform: rotate(-3deg);
+    }
+  }
+
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+
+    50% {
+      transform: scale(0.95);
+    }
+
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  @keyframes shake {
+
+    0%,
+    100% {
+      transform: translateX(0);
+    }
+
+    25% {
+      transform: translateX(-5px);
+    }
+
+    75% {
+      transform: translateX(5px);
+    }
+  }
+
+  // modificators up/down
+  &--down {
+
+  }
+
+  &--up {
+    
+  }
+
+  // Break points
+  // 1024
+  @include mixin.below-laptop {
+    max-width: 18rem;
+  }
+
+  // 768
+  @include mixin.below-tablet {
+    max-width: calc(18rem * 0.6);
+  }
+
+  // 480
+  @include mixin.below-mobile {
+    max-width: calc(18rem * 0.3);
+  }
+
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <title>UIUXer</title>
+</head>
+<body>
+  @@include('../layout/_header.html')
+  <!-- mobile nav -->
+  @@include('../layout/_mobile-nav.html')
+
+  <main class="main">
+    @@include('../blocks/_hero.html')
+    @@include('../blocks/_home-pages-demo.html')
+    @@include('../blocks/_case-studies.html')
+    @@include('../blocks/_supportive-pages.html')
+    @@include('../blocks/_utility-pages.html')
+    @@include('../blocks/_cta.html')
+  </main>
+
+  @@include('../layout/_footer.html')
+  <!-- Modal -->
+  @@include('../components/_modal.html')
+
+  <script src="/js/layout/nav-mobile.js"></script>
+  <script src="/js/components/modal.js"></script>
+  <script src="/js/main.js"></script>
+</body>
+</html>

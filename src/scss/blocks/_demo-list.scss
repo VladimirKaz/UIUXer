@@ -1,0 +1,78 @@
+@use '../abstracts/mixins' as mixin;
+
+.demo-list {
+
+  display: flex;
+  align-items: center;
+  gap: 0 3rem;
+
+  &__item {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3.9rem 0;
+
+    & img {
+      box-shadow: 0 3px 19px 0 rgba(0, 0, 0, 0.09);
+      border-radius: 20px;
+      overflow: hidden;
+    }
+  }
+  
+  &__subtitle {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 2.5rem;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: #242f65;
+
+    &--white {
+      color: #fff;
+    }
+  }
+
+  // 1024
+  @include mixin.below-laptop {
+    gap: 0 2rem;
+
+    &__item {
+      gap: 3rem 0;
+    }
+
+    &__subtitle {
+      font-size: 2.2rem;
+    }
+  }
+
+  // 768
+  @include mixin.below-tablet {
+    gap: 0 1.5rem;
+    
+    &__item {
+      gap: 2rem 0;
+    }
+
+    &__subtitle {
+      font-size: 2rem;
+    }
+  }
+
+  // 480
+  @include mixin.below-mobile {
+    gap: 1.2rem 0;
+    flex-direction: column;
+    
+    &__item {
+      gap: 1.2rem 0;
+      flex-direction: column-reverse;
+    }
+
+    &__subtitle {
+      font-size: 2rem;
+    }
+  }
+}
